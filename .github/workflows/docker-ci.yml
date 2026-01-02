@@ -11,6 +11,5 @@ jobs:
       - name: Build and push the image
         run : |
           docker login --username ${{ secrets.PAT_UNAME }} --password ${{ secrets.PAT_CI }} ghcr.io
-          cd document-layout-detection
           docker build . --tag ghcr.io/mdaniyalk/lightweight-health-check:latest
           docker push ghcr.io/mdaniyalk/lightweight-health-check:latest
